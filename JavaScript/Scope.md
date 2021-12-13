@@ -1,4 +1,4 @@
-Scope 함수의 유효범위
+### Scope 함수의 유효범위
 
 ```js
 function scope(){
