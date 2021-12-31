@@ -8,6 +8,7 @@
 ## 배운점(Hook 사용)
 ### 1. Context API 사용하기
 ### 2. useReducer 사용하기 
+### 3. 기타 Hook 사용하기
 ---
 
 ## Context API
@@ -154,4 +155,47 @@ const cartContext = {
   totalAmount : cartState.totalAmount,
   addItem : addItemToCartHandler
 }
+```
+---
+## 기타 Hook 사용하기
+
+- input element forwardRef
+```javascript
+import React from "react"
+import classes from "./Input.module.css"
+
+const Input = React.forwardRef((props, ref) => {
+  // ref 값도 props 처럼 받아서 쓸 수 있다.
+  return (
+    <div className={classes.input}>
+      <label htmlFor={props.input.id}>{props.label}</label>
+      <input ref={ref} {...props.input} />
+    </div>
+  )
+})
+
+export default Input
+```
+- Modal portalElemnet
+
+```javascript
+// div root 이외로 최상위로 끌어 올린다.
+const portalElement = document.getElementById("overlays")
+
+const Modal = (props) => {
+  return (
+    <>
+      {ReactDOM.createPortal(
+        <Backdrop onClose={props.onClose} />,
+        portalElement
+      )}
+      {ReactDOM.createPortal(
+        <ModalOverlay>{props.children}</ModalOverlay>,
+        portalElement
+      )}
+    </>
+  )
+}
+
+export default Modal
 ```
