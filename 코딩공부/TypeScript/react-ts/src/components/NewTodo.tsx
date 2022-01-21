@@ -9,6 +9,7 @@ const NewTodo = () => {
     const enteredText = todoTextIputRef.current!.value
 
     if (enteredText.trim().length === 0) {
+      console.log(enteredText)
       return
     }
   }
