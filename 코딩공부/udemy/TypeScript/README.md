@@ -2,7 +2,9 @@
 
 ## 미리보기
 
-![이미지1](./src/assets/Home.png)
+
+![이미지1](./src/assets/home.png)
+
 
 ## 사용한 기술
 ### **TypeScript**
