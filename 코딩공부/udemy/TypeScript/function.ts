@@ -11,3 +11,8 @@ function addResult(num: number): void {
 }
 
 addResult(add(5, 15))
+
+type FC = {
+  add: (n1: number, n2: number) => number
+  addResult: (num: number) => void
+}
