@@ -50,9 +50,7 @@ export const { login, logout } = createActions("LOGIN", "LOGOUT", prefix)
 
 // action type
 function* loginSaga(action: Action<LoginReqType>) {
-  console.log("asdasd")
   try {
-    console.log("try")
     yield put(pending())
     const token: string = yield call(UserService.login, action.payload)
 
@@ -72,13 +70,14 @@ export function* logoutSaga() {
     yield put(pending())
     const token: string = yield select((state) => state.auth.token)
     yield call(UserService.logout, token)
-    TokenService.remove()
-    yield put(success(token))
-    yield put(push("/"))
+    TokenService.set(token)
   } catch (err) {
     console.log(err, "logout")
     yield put(fail(new Error()))
     console.log(err)
+  } finally {
+    TokenService.remove()
+    yield put(success(null))
   }
 }
 
