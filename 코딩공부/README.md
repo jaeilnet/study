@@ -1,5 +1,7 @@
 # 클래스형 컴포넌트 라이프 사이클
 
+![라이프사이클](./react_books/img/lifeCycle.png)
+
 라이프사이클 메서드의 종류는 총 9가지입니다.
 
 **Will** 접두사가 붙은 메서드는 **어떤 작업을 작동하기 전 실행** 
@@ -37,6 +39,7 @@ DOM이 생성되고 웹 브라우저상에 나타나는 것을 마운트라고 �
 ### 업데이트에 해당 되는 메서드
 
 - **getDerivedStateFromProps** 마운트 과정에서도 소개를 드린 메서드로써 props에 따라 state 값이 변화를 주기 때문에  업데이트에도 해당 됩니다.
+Props 로 받아 온 값을 state에 동기화 시키는 용도
 
 - **shouldComponentUpdate** 컴포넌트가 리렌더링을 해야 할지 말아야 할지를 결정하는 메서드 이 메서드는 true혹은 false값을 반환해야 하고 true를 반환하면 다음 라이프사이클 메서드를 계속 실행하고 false를반환하면 작업을 중지합니다.
 - **getSnapshotBeforeUpdate** 컴포넌트 변화를 DOM에 반영하기 바로 직전에 호출하는 메서드
