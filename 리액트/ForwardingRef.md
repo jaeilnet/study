@@ -1,4 +1,4 @@
-## Forwarding Refs
+# Forwarding Refs
 
 ref 전달은 컴포넌트를 통해 자식 중 하나에 ref 를 자동으로 전달하는 기법,
 
