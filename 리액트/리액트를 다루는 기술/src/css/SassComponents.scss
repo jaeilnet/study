@@ -27,6 +27,34 @@ $violet:#7950f2;
   // red 클래스가 box와 함께 사용 됬을 때
   &.red {
     background:$red;
-    @include square((1))
+    @include square(1)
   }
+   &.orange {
+    background:$oragne;
+    @include square(2)
+  }
+   &.yellow {
+    background:$yellow;
+    @include square(3)
+  }
+   &.green {
+    background:$green;
+    @include square(4)
+  }
+   &.blue {
+    background:$blue;
+    @include square(5)
+  }
+   &.indigo {
+    background:$indigo;
+    @include square(6)
+  }
+   &.violet {
+    background:$violet;
+    @include square(7)
+  }
+  &:hover {
+    background-color: black;
+  }
+
 }
