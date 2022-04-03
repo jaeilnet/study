@@ -15,7 +15,6 @@ const AvailableMeals = () => {
       );
 
       if (!response.ok) {
-        // setHttpError()
         throw new Error("Something went wrong!");
       }
 
@@ -26,9 +25,9 @@ const AvailableMeals = () => {
       for (const key in responseData) {
         loadedMelas.push({
           id: key,
-          name: responseData[key],
-          price: response[key].price,
-          description: response[key].description,
+          name: responseData[key].name,
+          price: responseData[key].price,
+          description: responseData[key].description,
         });
 
         setMeals(loadedMelas);
