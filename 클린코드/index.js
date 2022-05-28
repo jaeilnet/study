@@ -1,9 +1,5 @@
-function fetchData() {
-  // if (state.data) {
-  //   return state.data;
-  // } else {
-  //   return "...loading";
-  // }
+let arr1 = [];
 
-  return state.data || "loading";
-}
+arr1.length = 3;
+
+console.log(arr1);
