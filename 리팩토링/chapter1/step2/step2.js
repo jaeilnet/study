@@ -1,5 +1,5 @@
 import createStatementData from "./createStatementData.js";
-import data from "../data.js";
+import data from "../data.js.js";
 
 // 중첩 함수
 
