@@ -1,7 +1,7 @@
 import createStatementData from "./createStatementData.js";
-import data from "../data.js";
+import data from "../data.js.js";
 
-// 중첩 함수
+// 다형성을 활용해 계산 코드 재구성하기
 
 function statement(invoice, plays) {
   return renderPlainText(createStatementData(invoice, plays));

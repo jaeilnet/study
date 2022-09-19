@@ -1,5 +1,6 @@
 import data from "../data.js";
 // 함수 추출
+// 전체 동작을 각각의 부분으로 나눌 수 있는 지점을 찾아 함수로 추출해내야 유지보수에 용이하다.
 
 console.log(data);
 function statement(invoice, plays) {
