@@ -1,9 +1,9 @@
 // 알 수 없는 타입
 
-let userInput: unknown
+let userInput: unknown;
 
-userInput = 5
-userInput = "max"
+userInput = 5;
+userInput = "max";
 
 //  어떤 타입도 지정가능
 
