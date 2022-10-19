@@ -1,4 +1,4 @@
-### Readonly
+## Readonly
 
 변경 관련 된 오류 방지를 위해 Readonly 사용하기
 
@@ -142,7 +142,7 @@ console.log(adds([1, 2, 3]));
 - 하지만 push, pop, splice 등 기존 배열을 바꿔버리는 속성들은 에러가 난다.
 - 매개변수를 수정하지 않는다면 readonly 을 선언하는 것이 좋다.
 
-### 매핑 된 타입을 사용하여 값을 동기화 하기
+## 매핑 된 타입을 사용하여 값을 동기화 하기
 
 ```ts
 interface ScatterProps {
