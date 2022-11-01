@@ -166,3 +166,5 @@ getComponents(vec, x); //err
 ```
 
 let 으로 선언한 x 는 string 으로 추론되어서 err 를 발생시킨다.
+
+const 로 선언한 x는 "x" 로 문자열 그대로 추론되어
