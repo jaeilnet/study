@@ -54,3 +54,11 @@ const stacks = addOptional(
   hasDate ? { start: -2589, end: -2568 } : null
 );
 ```
+
+## 일관성 있는 별칭(alias) 사용하기
+
+```ts
+const borough = { name: "Brooklyn", location: [40.688, -73.979] };
+
+const loc = borough.location;
+```
