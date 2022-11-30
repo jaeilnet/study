@@ -1,6 +1,6 @@
 //  node FP/example.js
 
-let users = [
+export let users = [
   { id: 1, name: "ID", age: 32 },
   { id: 2, name: "HA", age: 25 },
   { id: 3, name: "BJ", age: 32 },
