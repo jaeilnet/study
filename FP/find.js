@@ -80,12 +80,39 @@ function find(list, predicate) {
   }
 }
 
+find(user2, (user) => console.log(user.getName()));
+// HA;
+// ID;
+// HA;
+// BJ;
+// PJ;
+// JE;
+// JM;
+// HI;
+find(user2, (user) => console.log(user.getAge()));
+// 32;
+// 25;
+// 32;
+// 28;
+// 27;
+// 32;
+// 24;
+find(user2, (user) => console.log(user.getId()));
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+
 console.log(
   find(user2, function (u) {
     return u.getAge() === 25;
   }).getName()
 );
 
+console.log(find(user2, (u) => u.getAge() === 25).getName());
 // HA
 
 console.log(
