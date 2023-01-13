@@ -5,6 +5,7 @@ import { Usage as CompoundComponents } from "./components/compound-components/Us
 import { Usage as ControlComponents } from "./components/control-props/Usage";
 import { Usage as CustomHookComponents } from "./components/custom-hook-component/Usage";
 import { Usage as PropsGetterComponents } from "./components/props-getters/Usage";
+import { Usage as StateReducerComponent } from "./components/state-reducer/Usage";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <CustomHookComponents />
         <h1>Props-Getter-Components</h1>
         <PropsGetterComponents />
+        <h1>State-Reducer-Component</h1>
+        <StateReducerComponent />
       </header>
     </div>
   );
