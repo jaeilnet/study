@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 import { Counter } from "./Counter";
 
+const condition = (value: number) => {
+  if (value < 6) {
+    console.log(value);
+    return true;
+  }
+
+  return false;
+};
+
 export const Usage = () => {
   const [count, setCount] = useState(0);
 
   const handleChangeCounter = (newCount: number) => {
-    setCount(newCount);
+    if (condition(newCount)) {
+      setCount(newCount);
+    }
   };
 
   return (
