@@ -1,10 +1,15 @@
 import React from "react";
 import { useCounterContext } from "../compound-components/useCounterContext";
 
-function Increment({ icon = "plus" }) {
+interface Props {
+  icon: string;
+  onClick?: () => void;
+}
+
+function Increment({ icon = "plus", onClick }: Props) {
   const { handleIncrement } = useCounterContext();
   return (
-    <button className={icon} onClick={handleIncrement}>
+    <button className={icon} onClick={onClick || handleIncrement}>
       {icon}
     </button>
   );

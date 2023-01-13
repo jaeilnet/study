@@ -2,10 +2,15 @@ import React from "react";
 
 import { useCounterContext } from "../compound-components/useCounterContext";
 
-function Decrement({ icon = "minus" }) {
+interface Props {
+  icon: string;
+  onClick?: () => void;
+}
+
+function Decrement({ icon = "minus", onClick }: Props) {
   const { handleDecrement } = useCounterContext();
   return (
-    <button className={icon} onClick={handleDecrement}>
+    <button className={icon} onClick={onClick || handleDecrement}>
       {icon}
     </button>
   );
