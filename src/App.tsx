@@ -4,6 +4,7 @@ import "./App.css";
 import { Usage as CompoundComponents } from "./components/compound-components/Usage";
 import { Usage as ControlComponents } from "./components/control-props/Usage";
 import { Usage as CustomHookComponents } from "./components/custom-hook-component/Usage";
+import { Usage as PropsGetterComponents } from "./components/props-getters/Usage";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <ControlComponents />
         <h1>Custom-Hook-Components</h1>
         <CustomHookComponents />
+        <h1>Props-Getter-Components</h1>
+        <PropsGetterComponents />
       </header>
     </div>
   );
