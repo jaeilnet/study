@@ -7,7 +7,6 @@ module.exports = {
     "@storybook/preset-create-react-app",
     "@storybook/addon-interactions",
     "@storybook/addon-mdx-gfm",
-    "@storybook/addon-a11y",
   ],
   framework: {
     name: "@storybook/react-webpack5",
