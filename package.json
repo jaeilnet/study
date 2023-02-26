@@ -19,6 +19,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
+    "storybook": "^7.0.0-beta.54",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -26,8 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "init-msw": "msw init public/"
   },
   "eslintConfig": {
@@ -59,17 +60,18 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.5.7",
-    "@storybook/addon-essentials": "^6.5.7",
-    "@storybook/addon-interactions": "^6.5.7",
-    "@storybook/addon-links": "^6.5.7",
-    "@storybook/builder-webpack5": "^6.5.7",
-    "@storybook/jest": "^0.0.10",
-    "@storybook/manager-webpack5": "^6.5.7",
-    "@storybook/node-logger": "^6.5.7",
-    "@storybook/preset-create-react-app": "^4.1.2",
-    "@storybook/react": "^6.5.7",
-    "@storybook/testing-library": "^0.0.11",
+    "@storybook/addon-a11y": "^6.5.16",
+    "@storybook/addon-actions": "^7.0.0-beta.54",
+    "@storybook/addon-essentials": "^7.0.0-beta.54",
+    "@storybook/addon-interactions": "^7.0.0-beta.54",
+    "@storybook/addon-links": "^7.0.0-beta.54",
+    "@storybook/addon-mdx-gfm": "^7.0.0-beta.54",
+    "@storybook/jest": "^0.0.11-next.0",
+    "@storybook/node-logger": "^7.0.0-beta.54",
+    "@storybook/preset-create-react-app": "^7.0.0-beta.54",
+    "@storybook/react": "^7.0.0-beta.54",
+    "@storybook/react-webpack5": "^7.0.0-beta.54",
+    "@storybook/testing-library": "^0.0.14-next.1",
     "babel-plugin-named-exports-order": "^0.0.2",
     "msw": "^0.42.0",
     "msw-storybook-addon": "^1.6.3",
