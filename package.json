@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "test-storybook": "test-storybook --watch",
     "build-storybook": "storybook build",
-    "chromatic": "chromatic --exit-zero-on-changes"
+    "chromatic": "chromatic --project-token CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
     "@types/node": "20.2.5",
