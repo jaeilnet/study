@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Buttons from "./";
+import Buttons from ".";
 
 const meta: Meta<typeof Buttons> = {
   title: "Button",
@@ -42,5 +42,3 @@ export const Blue: Story = {
     label: "Button Test",
   },
 };
-
-// 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;
