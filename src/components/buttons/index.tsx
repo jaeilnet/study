@@ -9,7 +9,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Buttons = ({ label, color, ...props }: Props) => {
   return (
-    <button className={buttons[color]} {...props}>
+    <button style={{ padding: "12px"}}  className={buttons[color]} {...props}>
       {label}
     </button>
   );
