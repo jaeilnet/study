@@ -1,4 +1,15 @@
 {
+  "name": "design_patterns",
+  "version": "1.0",
+  "description": "design_patterns",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@types/webpack": "^5.28.1",
     "ts-loader": "^9.4.4",
