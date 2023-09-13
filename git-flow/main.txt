@@ -4,3 +4,5 @@ git tag .01
 
 
 develop work3
+
+release => develop 브런치에서 release/버전 브런치를 생성
