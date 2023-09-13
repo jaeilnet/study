@@ -24,3 +24,5 @@
    > on master: git merge --no-ff release/0.2
 
 7. 릴리즈 병합 후 버그 픽스
+
+8. hot fixes 는 다음 버전을 위한것이기 때문에 브런치 이름은 hotfixes/~다음버전 1.0 => 1.1 이런식으로 작성
