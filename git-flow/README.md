@@ -20,4 +20,7 @@
    > on develop: git merge release/0.2
 
 6. 마스터 브런치에서 릴리즈 브런치를 머지하는데 이때, 커밋내용을 남기기 위해서 fast forward 옵션을 꺼야한다.
+
    > on master: git merge --no-ff release/0.2
+
+7. 릴리즈 병합 후 버그 픽스
