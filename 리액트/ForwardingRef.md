@@ -9,6 +9,7 @@ React 컴포넌트에 ref props 를 넘겨서 그 내부에 있는 HTML elements
 input, button 등 ref를 필요로하는 최소단위 엘리먼트 컴포넌트를 만들었다면 그 엘리먼트 컴포넌트에게 ref 를 props로 받게 하려고 할 때 Forwarding Ref를 사용함
 
 ---
+
 ### 사용법
 
 ```javascript
@@ -16,6 +17,7 @@ input, button 등 ref를 필요로하는 최소단위 엘리먼트 컴포넌트�
 
  // 컴포넌트를 ForwardRef 로 감싸주면 된다.
 ```
+
 ## Chapter 10 사용예제
 
 ## 1. 부모 컴포넌트에서 useRef 선언하기
@@ -35,21 +37,19 @@ const Login = () => {
   )
 }
 ```
+
 ## 2. 최소단위 elements 컴포넌트
 
 ```javascript
-  import React from "react"
+import React from "react";
 
-  // forwardRef 를 사용하지 않으면 error 가 난다. 이유는 undefined가 전달 되서임
+// forwardRef 를 사용하지 않으면 error 가 난다. 이유는 undefined가 전달 되서임
 
-  const Input = React.forwardRef((props, ref) => {
+const Input = React.forwardRef((props, ref) => {
+  // ref를 받아올 수 있다.
 
-    // ref를 받아올 수 있다.
+  return <input ref={ref} />;
+});
 
-    return(
-      <input ref={ref}/>
-    )
-  })
-
-  export default Input
+export default Input;
 ```

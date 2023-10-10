@@ -7,33 +7,32 @@ useMemo를 사용하지 않을 시 아래코드는 인풋 값을 입력할 때�
 하지만 useMemo를 사용하면 getAverage의 함수의 값은 메모이제이션되어 뎁스의 값이 바뀔 때만 연산을 하게 됩니다.
 
 ```js
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from "react";
 
-const getAverage = numbers => {
-  console.log("평균 값 계산중")
-  if (numbers.length === 0) return 0
-  const sum = numbers.reduce((a, b) => a + b)
-  return sum / numbers.length
-}
+const getAverage = (numbers) => {
+  console.log("평균 값 계산중");
+  if (numbers.length === 0) return 0;
+  const sum = numbers.reduce((a, b) => a + b);
+  return sum / numbers.length;
+};
 
 const UseMemoSample = () => {
+  const [list, setList] = useState([]);
+  const [number, setNumber] = useState("");
 
-  const [list, setList] = useState([])
-  const [number, setNumber] = useState('')
+  const onChange = (e) => {
+    setNumber(e.target.value);
+  };
 
-  const onChange = e => {
-    setNumber(e.target.value)
-  }
+  const onInsert = (e) => {
+    const nextList = list.concat(parseInt(number));
+    setList(nextList);
+    setNumber("");
+  };
 
-  const onInsert = e => {
-    const nextList = list.concat(parseInt(number))
-    setList(nextList)
-    setNumber('')
-  }
-  
-  console.log(list, number)
+  console.log(list, number);
 
-  const avg = useMemo(() => getAverage(list), [list])
+  const avg = useMemo(() => getAverage(list), [list]);
 
   return (
     <div>
@@ -46,9 +45,8 @@ const UseMemoSample = () => {
       </ul>
       <div> 평균 값 {avg}</div>
     </div>
-  )
+  );
 };
 
-
-export default UseMemoSample
+export default UseMemoSample;
 ```

@@ -4,43 +4,42 @@
 코드량을 많이 줄일 수 있고 반복적인 일을 줄일 수 있다.
 
 ```js
-
 // useInput.js
-import React, { useReducer } from "react"
+import React, { useReducer } from "react";
 
 function reducer(state, action) {
   return {
     ...state,
     [action.name]: action.value,
-  }
+  };
 }
 
 const useCustomHookSample = (initialForm) => {
-  const [state, dispatch] = useReducer(reducer, initialForm)
+  const [state, dispatch] = useReducer(reducer, initialForm);
 
   const onChange = (e) => {
-    dispatch(e.target)
-  }
+    dispatch(e.target);
+  };
 
-  return [state, onChange]
-}
+  return [state, onChange];
+};
 
-export default useCustomHookSample
+export default useCustomHookSample;
 ```
 
 ```js
 // Info.js
-import React from "react"
-import useCustomHookSample from "./useCustomHookSample"
+import React from "react";
+import useCustomHookSample from "./useCustomHookSample";
 
 const Info = () => {
   // 커스텀훅 사용
   const [state, onChange] = useCustomHookSample({
     name: "",
     nickname: "",
-  })
+  });
 
-  const { name, nickname } = state
+  const { name, nickname } = state;
 
   return (
     <div>
@@ -58,8 +57,8 @@ const Info = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Info
+export default Info;
 ```
