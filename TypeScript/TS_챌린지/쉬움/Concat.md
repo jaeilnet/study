@@ -1,0 +1,15 @@
+[문제](https://www.typescriptlang.org/play?#code/PQKgUABBCsDMsQLQQMIHsB2BjAhgF0iUWJMICMBPCAQQwBMAnAUyoGkGcBnNAN04GsqACgACZZrAAM-DgDYAnFk4BKCAGJANkOABsfU4GHCmEJqTEQBOTgDm6jUAFI4eOAMpYGASwAOeQBrjEAAbV9HAoAOixMXDxfCEALVcAMIcAfTohAAYXAUPGIQB2hwBKhwB1FwAXRwBxBiEAbWsAQNcANVcAOQcAUseDklMABcYhABRaIQA9xhIhAbB7AA5qAGjaOwB8xwF6pwADewAZFiDDsfEAdVYhACYHAHQ7AFrGIQAYewBfRwBFxiEAMHsANNcAXVcAfUYhAS1XACabAE6bg6whACDH0gC5733e8TkI8CncmCAASkxOABXAA2eAgAF5UOF8AAeADaAEYALr9REAJlRAD4IMBgBAmAAPP5YPBMOgQPBoCBkf4o-rYwjvXz3PEAcVceAAEiCyAUIIAXnsADHXPCAACzweHcnGeBM+WAlwQAVpxgmgGABzYBwWDAfhoMAgYBGUAQAD6VutNutEEAN6Mi3IQQAq84AdlogKUApB2W21+i0QE1GH5-CAAFRB7jB-xhzBwdEwYKoIIw-AwaAA7hhEajg79-ugZnh4WGicSKfROOHI9H+gBVMsVuhViNRph4mEQRHBHth-o94J13Ngc3+v0QQAyi5lAB1LEEAAPOAF3HMr6x3ag64ALbuTWQkP-ADeEAAogBHEE4MH9I+kpjkiAAXwgADMGGgNxAAOQiPeIJUX6MYFqwLACCeCuGCnAfkY0ycLuNYxl2aIQFwUyYLBeahrgnDAtCXaENeZLFqe55gvChYREi6JdriGK4jivT4Te5LwsRF5kXCxY5hiaL0YhdEMVABG3kRZ5seRCJ7mgT7UvB-SSdJeDwbxjIQDx9GMYRLGiaR4mcciTJUYisD9AALDRiFMv0xkQGZOLqYJTEiSR7FFkiH7Ih+lmfrAH6GU+F7Yf0ZBoGg0Y4Bg-QfiZvnKe5nkQJikU+f0-kQUwQUhWFEWftF-FgMOBIQN+nCICShGlfompgHuRKVQwuG6fCGDgpeEApnQTBPq4GCUjiZogCuq4BtcgAy4xAgAXTYAIzWDaugamqAhB4oAqBOAK9NECAK81gAE42UYqStKsrysAirKmqGrarq8DAOFnAZkwDAGkaUDLWtorilKMpygqnBKqq6qajqerANwYKga4aGLRA1yAB6dEAWIAOBOACctb37Z9R3fSdf3nYaxqmkAA)
+
+- Araray.concat 의 타입을 구현해보는 문제
+
+---
+
+1. [가변 튜플 타입](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-0.html#variadic-tuple-types)을 이용해서 해결하는 문제
+
+타입스크립트 4.0 부터는 rest 매개변수와 rest 튜플요소에 대한 추론 프로세스를 개선하여 이를 입력하고 '작동'하도록 할 수 있습니다.
+
+```ts
+type Arr = readonly unknown[];
+
+type TupleArray<T extends Arr, U extends Arr> = [...T, ...U];
+```
