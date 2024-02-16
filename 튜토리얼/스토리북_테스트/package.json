@@ -1,0 +1,42 @@
+{
+  "name": "sides",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "test-storybook": "test-storybook --watch",
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic --project-token CHROMATIC_PROJECT_TOKEN"
+  },
+  "dependencies": {
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.4",
+    "next": "13.4.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^7.0.18",
+    "@storybook/addon-essentials": "^7.0.18",
+    "@storybook/addon-interactions": "^7.0.18",
+    "@storybook/addon-links": "^7.0.18",
+    "@storybook/addon-styling": "^1.0.8",
+    "@storybook/blocks": "^7.0.18",
+    "@storybook/nextjs": "^7.0.18",
+    "@storybook/react": "^7.0.18",
+    "@storybook/test-runner": "^0.10.0",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "chromatic": "^6.18.0",
+    "eslint-plugin-storybook": "^0.6.12",
+    "sass": "^1.62.1",
+    "storybook": "^7.0.18"
+  }
+}
